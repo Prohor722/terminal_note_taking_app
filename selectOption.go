@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func selectOption() {
 	switch option {
 	case 1:
