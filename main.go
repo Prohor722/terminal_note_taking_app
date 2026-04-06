@@ -21,7 +21,7 @@ var option = 0
 func main() {
 	fmt.Println("Welcome to the Note Taking App!")
 
-	
-
+	selectOption()
+	pickOption()
 
 }
