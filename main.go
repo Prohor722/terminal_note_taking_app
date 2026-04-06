@@ -17,6 +17,5 @@ var notes []struct {
 }
 
 func main() {
-	test()
-	fmt.Println("Hello, World!")
+	fmt.Println("Welcome to the Note Taking App!")
 }
