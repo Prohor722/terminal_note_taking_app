@@ -31,3 +31,10 @@ func addTitle() string{
 	fmt.Scanln(&title)
 	return title
 }
+
+func addBody() string{
+	fmt.Println("Enter note body:")
+	var body string
+	fmt.Scanln(&body)
+	return body
+}
