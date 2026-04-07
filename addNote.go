@@ -24,3 +24,10 @@ func addNote() {
 	}{note: note})
 	fmt.Println("Note added successfully!")
 }
+
+func addTitle() string{
+	fmt.Println("Enter note title:")
+	var title string
+	fmt.Scanln(&title)
+	return title
+}
