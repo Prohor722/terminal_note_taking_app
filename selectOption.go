@@ -5,22 +5,22 @@ import "fmt"
 func selectOption() {
 	switch option {
 	case 1:
-		addNote()
-		pickOption()
+		caseCall(addNote)
 	case 2:
-		viewNotes()
-		pickOption()
+		caseCall(viewNotes)
 	case 3:
-		deleteNote()
-		pickOption()
+		caseCall(deleteNote)
 	case 4:
-		editNote()
-		pickOption()
+		caseCall(editNote)
 	case 5:
 		fmt.Println("Exiting the Note Taking App...")
 		return
 	default:
 		fmt.Println("Invalid option. Please try again.")
-		pickOption()
 	}
+}
+
+func caseCall(f func()) {
+	f()
+	pickOption()
 }
