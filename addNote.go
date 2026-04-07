@@ -4,12 +4,10 @@ import "fmt"
 
 func addNote() {
 	fmt.Println("Add new note..")
-	fmt.Println("Enter note title:")
-	var title string
-	fmt.Scanln(&title)
-	fmt.Println("Enter note body:")
-	var body string
-	fmt.Scanln(&body)
+	
+	title := addTitle()
+	body := addBody()
+	
 	note = struct {
 		id  int
 		title string
