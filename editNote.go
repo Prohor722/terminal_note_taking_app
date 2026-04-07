@@ -9,9 +9,8 @@ func editNote() {
 	fmt.Scanln(&id)
 	for i, n := range notes {
 		if n.note.id == id {
-			fmt.Println("Enter new note title:")
-			var title string
-			fmt.Scanln(&title)
+			title := addTitle()
+			
 			fmt.Println("Enter new note body:")
 			var body string
 			fmt.Scanln(&body)
