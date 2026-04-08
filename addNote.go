@@ -8,11 +8,7 @@ func addNote() {
 	title := addTitle()
 	body := addBody()
 	
-	note = struct {
-		id  int
-		title string
-		body  string
-	}{id: len(notes) + 1, title: title, body: body}
+	var note = Note{id: len(notes) + 1, title: title, body: body}
 	notes = append(notes, struct {
 		note struct {
 			id  int
