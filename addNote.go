@@ -9,13 +9,7 @@ func addNote() {
 	body := addBody()
 	
 	var note = Note{id: len(notes) + 1, title: title, body: body}
-	notes = append(notes, struct {
-		note struct {
-			id  int
-			title string
-			body  string
-		}
-	}{note: note})
+	notes = append(notes, &note)
 	fmt.Println("Note added successfully!")
 }
 
