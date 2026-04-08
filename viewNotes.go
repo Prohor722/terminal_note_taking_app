@@ -9,6 +9,6 @@ func viewNotes() {
 	}
 	fmt.Println("Your notes:")
 	for i, n := range notes {
-		fmt.Printf("No.%d \nID: %d\nTitle: %s\nBody: %s\n\n",i+1, n.note.id, n.note.title, n.note.body)
+		fmt.Printf("No.%d \nID: %d\nTitle: %s\nBody: %s\n\n",i+1, n.id, n.title, n.body)
 	}
 }
