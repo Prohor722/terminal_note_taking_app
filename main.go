@@ -2,19 +2,13 @@ package main
 
 import "fmt"
 
-var note struct {
+type Note struct {
 	id   int
 	title string
 	body  string
 }
 
-var notes []struct {
-	note struct {
-		id  int
-		title string
-		body  string
-	}
-}
+var notes []*Note
 
 var option = 0
 
