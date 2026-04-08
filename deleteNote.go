@@ -8,7 +8,7 @@ func deleteNote(){
 	var id int
 	fmt.Scanln(&id)
 	for i, n := range notes {
-		if n.note.id == id {
+		if n.id == id {
 			notes = append(notes[:i], notes[i+1:]...)
 			fmt.Println("Note deleted successfully!")
 			return
