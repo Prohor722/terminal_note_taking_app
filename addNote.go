@@ -29,6 +29,8 @@ func validateTitle(title string) bool {
 	return true
 }
 
+func validateBody(body string) bool {
+
 func addBody() string{
 	fmt.Println("Enter note body:")
 	var body string
