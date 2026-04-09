@@ -20,6 +20,10 @@ func addTitle() string{
 	return title
 }
 
+func validateTitle(title string) bool {
+	for _, note := range notes {
+		if note.title == title {
+
 func addBody() string{
 	fmt.Println("Enter note body:")
 	var body string
