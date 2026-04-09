@@ -17,7 +17,7 @@ func addTitle() string{
 	fmt.Println("Enter note title:")
 	var title string
 	fmt.Scanln(&title)
-	
+
 	if !validateTitle(title) {
 		fmt.Println("Title already exists. Please enter a unique title.")
 		return addTitle()
@@ -47,5 +47,9 @@ func addBody() string{
 	fmt.Println("Enter note body:")
 	var body string
 	fmt.Scanln(&body)
+	if !validateBody(body) {
+		fmt.Println("Body already exists. Please enter a unique body.")
+		return addBody()
+	}
 	return body
 }
