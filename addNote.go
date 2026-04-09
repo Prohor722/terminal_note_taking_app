@@ -30,6 +30,10 @@ func validateTitle(title string) bool {
 }
 
 func validateBody(body string) bool {
+	for _, note := range notes {
+		if note.body == body {
+			return false
+		}
 
 func addBody() string{
 	fmt.Println("Enter note body:")
