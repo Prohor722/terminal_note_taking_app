@@ -17,6 +17,11 @@ func addTitle() string{
 	fmt.Println("Enter note title:")
 	var title string
 	fmt.Scanln(&title)
+	
+	if !validateTitle(title) {
+		fmt.Println("Title already exists. Please enter a unique title.")
+		return addTitle()
+	}
 	return title
 }
 
