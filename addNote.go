@@ -34,6 +34,9 @@ func validateBody(body string) bool {
 		if note.body == body {
 			return false
 		}
+	}
+	return true
+}
 
 func addBody() string{
 	fmt.Println("Enter note body:")
