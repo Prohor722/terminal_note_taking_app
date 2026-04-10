@@ -17,5 +17,5 @@ func pickOption() {
 
 	fmt.Print("Enter your choice: ")
 	fmt.Scanln(&option)
-	selectOption()
+	selectOption(option)
 }
