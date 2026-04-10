@@ -9,13 +9,39 @@ var options = []string{
 	"Exit",
 }
 
-func pickOption() {
-	fmt.Println("Select a option:")
+// func pickOption() {
+// 	fmt.Println("Select a option:")
+// 	for i, option := range options {
+// 		fmt.Printf("%d. %s\n", i+1, option)
+// 	}
+
+// 	fmt.Print("Enter your choice: ")
+// 	fmt.Scanln(&option)
+// 	selectOption(option)
+// }
+
+func pickOption() int {
+	var choice int
+
+	fmt.Println("\nSelect an option:")
 	for i, option := range options {
 		fmt.Printf("%d. %s\n", i+1, option)
 	}
 
-	fmt.Print("Enter your choice: ")
-	fmt.Scanln(&option)
-	selectOption(option)
+	for {
+		fmt.Print("Enter your choice: ")
+		_, err := fmt.Scanln(&choice)
+
+		if err != nil {
+			fmt.Println("Invalid input. Please enter a number.")
+			continue
+		}
+
+		if choice < 1 || choice > len(options) {
+			fmt.Println("Please select a valid option.")
+			continue
+		}
+
+		return choice
+	}
 }
