@@ -9,16 +9,6 @@ var options = []string{
 	"Exit",
 }
 
-// func pickOption() {
-// 	fmt.Println("Select a option:")
-// 	for i, option := range options {
-// 		fmt.Printf("%d. %s\n", i+1, option)
-// 	}
-
-// 	fmt.Print("Enter your choice: ")
-// 	fmt.Scanln(&option)
-// 	selectOption(option)
-// }
 
 func pickOption() int {
 	var choice int
