@@ -7,6 +7,31 @@ import (
 	"strings"
 )
 
+func addNote() {
+	fmt.Println("\n--- Add New Note ---")
+
+	title := inputWithValidation(
+		"Enter note title: ",
+		isTitleUnique,
+		"Title already exists. Please enter a unique title.",
+	)
+
+	body := inputWithValidation(
+		"Enter note body: ",
+		isBodyUnique,
+		"Body already exists. Please enter a unique body.",
+	)
+
+	note := &Note{
+		id:    len(notes) + 1,
+		title: title,
+		body:  body,
+	}
+
+	notes = append(notes, note)
+	fmt.Println("✅ Note added successfully!")
+}
+
 // func addNote() {
 // 	fmt.Println("Add new note..")
 	
