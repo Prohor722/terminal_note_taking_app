@@ -1,9 +1,13 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 	"strings"
 )
+
+var reader = bufio.NewReader(os.Stdin)
 
 func addNote() {
 	fmt.Println("\n--- Add New Note ---")
