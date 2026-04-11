@@ -62,6 +62,15 @@ func isTitleUnique(title string) bool {
 	return true
 }
 
+func isBodyUnique(body string) bool {
+	for _, note := range notes {
+		if strings.EqualFold(note.body, body) {
+			return false
+		}
+	}
+	return true
+}
+
 // func addNote() {
 // 	fmt.Println("Add new note..")
 	
