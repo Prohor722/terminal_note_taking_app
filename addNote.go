@@ -32,6 +32,27 @@ func addNote() {
 	fmt.Println("✅ Note added successfully!")
 }
 
+func inputWithValidation(prompt string, validate func(string) bool, errorMsg string) string {
+	for {
+		fmt.Print(prompt)
+
+		input, _ := reader.ReadString('\n')
+		input = strings.TrimSpace(input)
+
+		if input == "" {
+			fmt.Println("Input cannot be empty.")
+			continue
+		}
+
+		if !validate(input) {
+			fmt.Println(errorMsg)
+			continue
+		}
+
+		return input
+	}
+}
+
 // func addNote() {
 // 	fmt.Println("Add new note..")
 	
