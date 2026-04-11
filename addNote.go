@@ -53,6 +53,15 @@ func inputWithValidation(prompt string, validate func(string) bool, errorMsg str
 	}
 }
 
+func isTitleUnique(title string) bool {
+	for _, note := range notes {
+		if strings.EqualFold(note.title, title) {
+			return false
+		}
+	}
+	return true
+}
+
 // func addNote() {
 // 	fmt.Println("Add new note..")
 	
