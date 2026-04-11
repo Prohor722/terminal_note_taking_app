@@ -7,54 +7,54 @@ import (
 	"strings"
 )
 
-func addNote() {
-	fmt.Println("Add new note..")
+// func addNote() {
+// 	fmt.Println("Add new note..")
 	
-	title := addTitle()
-	body := addBody()
+// 	title := addTitle()
+// 	body := addBody()
 	
-	var note = Note{id: len(notes) + 1, title: title, body: body}
-	notes = append(notes, &note)
-	fmt.Println("Note added successfully!")
-}
+// 	var note = Note{id: len(notes) + 1, title: title, body: body}
+// 	notes = append(notes, &note)
+// 	fmt.Println("Note added successfully!")
+// }
 
-func addTitle() string{
-	fmt.Println("Enter note title:")
-	var title string
-	fmt.Scanln(&title)
+// func addTitle() string{
+// 	fmt.Println("Enter note title:")
+// 	var title string
+// 	fmt.Scanln(&title)
 
-	if !validateTitle(title) {
-		fmt.Println("Title already exists. Please enter a unique title.")
-		return addTitle()
-	}
-	return title
-}
+// 	if !validateTitle(title) {
+// 		fmt.Println("Title already exists. Please enter a unique title.")
+// 		return addTitle()
+// 	}
+// 	return title
+// }
 
-func validateTitle(title string) bool {
-	for _, note := range notes {
-		if note.title == title {
-			return false
-		}
-	}
-	return true
-}
+// func validateTitle(title string) bool {
+// 	for _, note := range notes {
+// 		if note.title == title {
+// 			return false
+// 		}
+// 	}
+// 	return true
+// }
 
-func validateBody(body string) bool {
-	for _, note := range notes {
-		if note.body == body {
-			return false
-		}
-	}
-	return true
-}
+// func validateBody(body string) bool {
+// 	for _, note := range notes {
+// 		if note.body == body {
+// 			return false
+// 		}
+// 	}
+// 	return true
+// }
 
-func addBody() string{
-	fmt.Println("Enter note body:")
-	var body string
-	fmt.Scanln(&body)
-	if !validateBody(body) {
-		fmt.Println("Body already exists. Please enter a unique body.")
-		return addBody()
-	}
-	return body
-}
+// func addBody() string{
+// 	fmt.Println("Enter note body:")
+// 	var body string
+// 	fmt.Scanln(&body)
+// 	if !validateBody(body) {
+// 		fmt.Println("Body already exists. Please enter a unique body.")
+// 		return addBody()
+// 	}
+// 	return body
+// }
