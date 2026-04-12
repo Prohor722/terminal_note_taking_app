@@ -9,6 +9,13 @@ func addTitle() string {
 	return title
 }
 
+func addBody() string {
+	var body string
+	fmt.Print("Enter body: ")
+	fmt.Scanln(&body)
+	return body
+}
+
 func editNote() {
 	fmt.Println("Edit note..")
 	fmt.Println("Enter note id to edit:")
