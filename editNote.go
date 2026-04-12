@@ -33,3 +33,19 @@ func findNoteByID(id int) *Note {
 	}
 	return nil
 }
+
+func inputString(prompt string) string {
+	for {
+		fmt.Print(prompt)
+
+		input, _ := reader.ReadString('\n')
+		input = strings.TrimSpace(input)
+
+		if input == "" {
+			fmt.Println("Input cannot be empty.")
+			continue
+		}
+
+		return input
+	}
+}
