@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
-
+import (
+	"fmt"
+	"strings"
+)
 
 func editNote() {
 	fmt.Println("\n--- Edit Note ---")
