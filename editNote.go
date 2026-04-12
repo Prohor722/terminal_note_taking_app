@@ -49,3 +49,23 @@ func inputString(prompt string) string {
 		return input
 	}
 }
+
+func inputInt(prompt string) int {
+	for {
+		fmt.Print(prompt)
+
+		var id int
+		_, err := fmt.Scanln(&id)
+		if err != nil {
+			fmt.Println("Invalid number. Try again.")
+			clearInputBuffer()
+			continue
+		}
+
+		return id
+	}
+}
+
+func clearInputBuffer() {
+	reader.ReadString('\n')
+}
