@@ -24,3 +24,12 @@ func editNote() {
 
 	fmt.Println("✅ Note updated successfully!")
 }
+
+func findNoteByID(id int) *Note {
+	for _, n := range notes {
+		if n.id == id {
+			return n
+		}
+	}
+	return nil
+}
