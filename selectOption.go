@@ -32,5 +32,7 @@ func selectOption(option int) bool {
 
 func caseCall(f func()) {
 	f()
-	pickOption()
+	if pickOption()>0 || pickOption()<6 {
+        selectOption(option)
+    }
 }

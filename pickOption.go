@@ -32,6 +32,7 @@ func pickOption() int {
 			continue
 		}
 
+		option = choice
 		return choice
 	}
 }
