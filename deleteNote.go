@@ -7,12 +7,12 @@ import (
 	"strings"
 )
 
-var reader = bufio.NewReader(os.Stdin)
+var reader2 = bufio.NewReader(os.Stdin)
 
 func deleteNote() {
 	fmt.Println("\n--- Delete Note ---")
 
-	id := inputInt("Enter note ID to delete: ")
+	id := inputInt2("Enter note ID to delete: ")
 
 	index := findNoteIndexByID(id)
 	if index == -1 {
@@ -39,7 +39,7 @@ func findNoteIndexByID(id int) int {
 	return -1
 }
 
-func inputInt(prompt string) int {
+func inputInt2(prompt string) int {
 	for {
 		fmt.Print(prompt)
 
@@ -47,7 +47,7 @@ func inputInt(prompt string) int {
 		_, err := fmt.Scanln(&id)
 		if err != nil {
 			fmt.Println("Invalid number. Try again.")
-			clearInputBuffer()
+			clearInputBuffer2()
 			continue
 		}
 		return id
@@ -58,7 +58,7 @@ func confirmAction(prompt string) bool {
 	for {
 		fmt.Print(prompt)
 
-		input, _ := reader.ReadString('\n')
+		input, _ := reader2.ReadString('\n')
 		input = strings.TrimSpace(strings.ToLower(input))
 
 		if input == "y" || input == "yes" {
@@ -72,7 +72,6 @@ func confirmAction(prompt string) bool {
 	}
 }
 
-
-func clearInputBuffer() {
-	reader.ReadString('\n')
+func clearInputBuffer2() {
+	reader2.ReadString('\n')
 }
