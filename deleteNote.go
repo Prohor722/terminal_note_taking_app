@@ -66,3 +66,8 @@ func confirmAction(prompt string) bool {
 		fmt.Println("Please enter 'y' or 'n'.")
 	}
 }
+
+
+func clearInputBuffer() {
+	reader.ReadString('\n')
+}
