@@ -49,3 +49,20 @@ func inputInt(prompt string) int {
 	}
 }
 
+func confirmAction(prompt string) bool {
+	for {
+		fmt.Print(prompt)
+
+		input, _ := reader.ReadString('\n')
+		input = strings.TrimSpace(strings.ToLower(input))
+
+		if input == "y" || input == "yes" {
+			return true
+		}
+		if input == "n" || input == "no" {
+			return false
+		}
+
+		fmt.Println("Please enter 'y' or 'n'.")
+	}
+}
