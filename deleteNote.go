@@ -24,3 +24,12 @@ func deleteNote() {
 	notes = append(notes[:index], notes[index+1:]...)
 	fmt.Println("✅ Note deleted successfully!")
 }
+
+func findNoteIndexByID(id int) int {
+	for i, n := range notes {
+		if n.id == id {
+			return i
+		}
+	}
+	return -1
+}
